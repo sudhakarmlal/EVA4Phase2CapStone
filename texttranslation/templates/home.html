@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<header>
+		<div class="container">
+		<div id="brandname">EVA$ Phase2 Text App</div>
+	        <h2>German to English translation WebApp</h2>
+        </div>
+	</header>
+	<div class="ml-container">
+		<form action="{{ url_for('predict')}}" method="POST">
+		    <p>Write a sentence in German in below textbox: </p>
+		    <textarea name="tweet" rows="4" cols="50"></textarea>
+		    <br/>
+		    <input type="submit" class="btn-info" value="translate">
+	    </form>
+	</div>
+	<header>
+		<div class="container2">
+		<div id="brandname">EVA$ Phase2 Image App</div>
+	        <h2>Image Upload and Train App</h2>
+        </div>
+	</header>
+	<div class="ml-image-app">
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="Upload Image" name="submit">
+</form>    
+</div>
+</body>
+</html>

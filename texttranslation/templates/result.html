@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<header>
+		<div class="container">
+		<div id="brandname">EVA4 Phase2</div>
+		<h2>German to English translation WebApp</h2>
+	    </div>
+	</header>
+	<p style="color:black;font-size:20;"><b>English Translation: </b></p>
+	<div class="results">
+
+        <h2 style="color:red;">{{ prediction }}</h2>
+
+	</div>
+</body>
+</html>
